@@ -21,9 +21,9 @@ services:
       - /opt/containers/traefik/letsencrypt/acme.json:/acme.json
     labels:
       - traefik.enable=true
-      - traefik.http.routers.traefik-dashboard.rule=Host(`traefik.guillaumereynaud.com`)
+      - traefik.http.routers.traefik-dashboard.rule=Host(`traefik.mondomaine.com`)
       - traefik.http.routers.traefik-dashboard.entrypoints=websecure
       - traefik.http.routers.traefik-dashboard.tls.options=secure@file
       - traefik.http.routers.traefik-dashboard.service=api@internal
       - traefik.http.routers.traefik-dashboard.middlewares=secureHeaders@file,auth
-      - traefik.http.middlewares.auth.basicauth.users=guillaume:$$apr1$$5u7pt4qd$$bxe0zjyQgcXH9K66NexbV.
+      - traefik.http.middlewares.auth.basicauth.users=toto:$$apr1$$5u7pt4qd$$bxe0zjyQgcXH9066NexbV.
